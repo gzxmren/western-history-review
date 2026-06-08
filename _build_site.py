@@ -70,6 +70,13 @@ SLUG_MAP = {
     'agent_handoff_deliverable': 'agent_handoff_deliverable',
     # Geography
     'agent_handoff_history_methodology': 'agent_handoff_history_methodology',
+    # Topic 8 — Hong Kong (new)
+    'topic8_diagnostic_report': 'topic8_diagnostic_report',
+    'topic8_skills_source_analysis': 'topic8_skills_source_analysis',
+    'topic8_skills_causality': 'topic8_skills_causality',
+    'topic8_skills_comparison': 'topic8_skills_comparison',
+    'topic8_skills_evaluation': 'topic8_skills_evaluation',
+    'topic8_depth_index': 'topic8_depth_index',
 }
 
 # Likewise for titles
@@ -90,6 +97,13 @@ TITLE_MAP = {
     '技能框架_評價分析': '评价分析框架 (P-E-B-C) — 中国历史',
     'agent_handoff_deliverable': '中国历史 — Agent 交接文档',
     'agent_handoff_history_methodology': '地理科 — 实战复盘方法论',
+    # Topic 8 — Hong Kong
+    'topic8_diagnostic_report': 'Topic 8 诊断报告 — Growth of Hong Kong',
+    'topic8_skills_source_analysis': 'Source Analysis Framework — Topic 8',
+    'topic8_skills_causality': 'Causality Chain Framework — Topic 8',
+    'topic8_skills_comparison': 'Comparative Analysis Framework — Topic 8',
+    'topic8_skills_evaluation': 'Evaluation Framework — Topic 8',
+    'topic8_depth_index': 'Cognitive Depth Index — Topic 8',
 }
 
 def get_slug(basename):
