@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 1 · Scientific Revolution &amp; Enlightenment · 复习</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --orange: #d97706;
+    --orange-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --text: #1e293b;
+    --text-dim: #64748b;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 0;
+  }
+  .topbar {
+    background: var(--accent);
+    color: white;
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .topbar h1 { font-size: 1.6em; margin-bottom: 4px; }
+  .topbar p { font-size: 0.92em; opacity: 0.9; }
+  .container { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
+
+  /* Segment nav */
+  .seg-nav {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 24px; justify-content: center;
+  }
+  .seg-nav a {
+    display: inline-block; padding: 6px 14px;
+    border-radius: 20px; font-size: 0.82em;
+    text-decoration: none; font-weight: 600;
+    background: var(--border); color: var(--text-dim);
+    transition: 0.2s;
+  }
+  .seg-nav a:hover { background: var(--accent-light); color: var(--accent); }
+
+  /* Segment cards */
+  .segment {
+    background: var(--card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .segment h2 {
+    font-size: 1.2em;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-light);
+  }
+  .segment h3 {
+    font-size: 1.05em;
+    margin: 16px 0 8px;
+    color: var(--text);
+  }
+  .segment h4 {
+    font-size: 0.95em;
+    margin: 12px 0 6px;
+    color: var(--text);
+  }
+  .segment p { margin: 6px 0; }
+  .segment ul, .segment ol { margin: 6px 0 6px 20px; }
+  .segment li { margin: 4px 0; }
+
+  /* Highlight boxes */
+  .box-blue {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+  .box-green {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+  .box-orange {
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+  .box-red {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9em;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent-light);
+    font-weight: 600;
+    color: var(--accent);
+  }
+  tr:nth-child(even) { background: var(--bg); }
+
+  /* English inline */
+  .en { color: var(--accent); font-weight: 500; }
+  .keyword { display: inline-block; background: var(--accent-light); padding: 1px 8px; border-radius: 4px; font-weight: 600; }
+
+  /* Quiz toggles */
+  details.quiz {
+    margin: 10px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  details.quiz summary {
+    padding: 10px 14px;
+    background: var(--bg);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  details.quiz summary:hover { background: var(--accent-light); }
+  details.quiz .answer {
+    padding: 12px 14px;
+    background: var(--green-light);
+    border-top: 1px solid var(--border);
+  }
+  details.quiz .answer .wrong { background: var(--red-light); }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-weight: 600;
+  }
+  .tag-time { background: #ede9fe; color: #6d28d9; }
+  .tag-book { background: #fce7f3; color: #be185d; }
+
+  .two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-dim);
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>📖 Topic 5 · The Rise of Modern Europe</h1>
+  <p>Day 1 · Scientific Revolution &amp; Enlightenment · 科学革命与启蒙运动</p>
+  <p style="margin-top:6px;font-size:0.85em;opacity:0.8;">
+    ⏱ 约 1h45min &nbsp;|&nbsp; 📍 OCR p.30-34 / 教材 p.30-43
+  </p>
+</div>
+
+<div class="container">
+
+<!-- NAV -->
+<div class="seg-nav">
+  <a href="#s1">S1 背景+概念</a>
+  <a href="#s2">S2 四位科学家</a>
+  <a href="#s3">S3 影响</a>
+  <a href="#s4">S4 启蒙背景+概念</a>
+  <a href="#s5">S5 五位思想家</a>
+  <a href="#s6">S6 启蒙影响</a>
+  <a href="#s7">S7 复习自测</a>
+</div>
+
+<!-- ============ SEGMENT 1 ============ -->
+<div class="segment" id="s1">
+  <h2>Segment 1 · Scientific Revolution — 背景 + 三大概念 <span class="tag tag-time">15min</span></h2>
+
+  <h3>背景</h3>
+  <p>在 <span class="keyword">Scientific Revolution</span>（<strong>科学革命</strong>，<strong>17世纪</strong>）之前，欧洲人相信：</p>
+  <div class="box-blue">
+    <p>The Earth was the centre of the universe. The Church said so, so it must be true.</p>
+    <p style="color:var(--text-dim);">地球是宇宙中心，教会说了就是对的。</p>
+  </div>
+  <p>Scientific Revolution 打破了这一点：</p>
+  <div class="box-green">
+    <p><strong>From</strong> "the Church says so" → <strong>To</strong> "Let me observe, experiment, and prove it."</p>
+    <p style="color:var(--text-dim);">从"教会说了算" → "我自己观察、实验来证明"</p>
+  </div>
+
+  <h3>三大关键概念</h3>
+
+  <h4>① <span class="keyword">Scientific method</span>（科学方法）</h4>
+  <div class="box-blue">
+    <p>A systematic way of discovering truth:</p>
+    <p style="font-size:1.05em;"><strong>Observation</strong>（观察）→ <strong>Hypothesis</strong>（假说）→ <strong>Experiment</strong>（实验）→ <strong>Theory</strong>（理论）</p>
+  </div>
+
+  <h4>② <span class="keyword">Laws of nature</span>（自然法则）</h4>
+  <p>自然界有固定规律。苹果往下掉不是随机的，而是受 <span class="keyword">law of universal gravitation</span>（<strong>万有引力定律</strong>）支配。</p>
+
+  <h4>③ <span class="keyword">Clockwork Universe Theory</span>（大机械宇宙观）</h4>
+  <div class="box-green">
+    <p>Newton proposed: <strong>The universe is like a great clock.</strong> Every part works according to fixed laws. Man can discover these laws through <strong>reason</strong>（理性）.</p>
+    <p style="color:var(--text-dim);">牛顿提出：宇宙像一座大钟，每个部件都按固定规律运行，人可以通过理性发现这些规律。</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.30-31</strong>（教材 p.30-31）—— Causes of the Scientific Revolution</p>
+    <ul>
+      <li>(i) Encouragement of the Renaissance and the printing press（文艺复兴和印刷术）</li>
+      <li>(ii) Encouragement of the Voyages of Discovery（地理大发现）</li>
+    </ul>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检（点击显示答案）</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> What was the Scientific Revolution? (when, what changed?)</p>
+      <p><strong>A:</strong> A breakthrough in scientific theories in the <strong>17th century</strong>. It changed Europeans from believing the Church to using observation and experiment.</p>
+      <hr style="margin:8px 0;border-color:var(--border);">
+      <p><strong>Q:</strong> What is the scientific method? (name the steps)</p>
+      <p><strong>A:</strong> <strong>Observation</strong> → <strong>Hypothesis</strong> → <strong>Experiment</strong> → <strong>Theory</strong></p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 2 ============ -->
+<div class="segment" id="s2">
+  <h2>Segment 2 · Scientific Revolution — 四位科学家 <span class="tag tag-time">15min</span></h2>
+
+  <table>
+    <thead>
+      <tr><th>Scientist</th><th>中文</th><th>Achievement</th><th>一句话记</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Kepler</strong></td><td>开普勒</td>
+        <td>Laws of <strong>planetary motion</strong><br>（行星运动定律）</td>
+        <td>行星怎么绕太阳转</td>
+      </tr>
+      <tr>
+        <td><strong>Harvey</strong></td><td>哈维</td>
+        <td><strong>Blood circulation</strong><br>（血液循环）</td>
+        <td>血液怎么在体内循环</td>
+      </tr>
+      <tr>
+        <td><strong>Boyle</strong></td><td>波义耳</td>
+        <td><strong>Chemical elements</strong> / scientific method<br>（化学元素）</td>
+        <td>化学之父</td>
+      </tr>
+      <tr>
+        <td><strong>Newton</strong></td><td>牛顿</td>
+        <td>Law of <strong>universal gravitation</strong><br>Clockwork Universe Theory<br>（万有引力定律、大机械宇宙观）</td>
+        <td>苹果砸出来的</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>补充：<span class="keyword">Royal Society</span>（皇家学会）</h3>
+  <div class="box-blue">
+    <p>Founded in <strong>1660</strong> in London. An <strong>independent</strong> scientific organization.</p>
+    <p>Scientists could share ideas and publish reports. Before this, the Church controlled science.</p>
+    <p style="color:var(--text-dim);">1660年在伦敦成立。科学家可以自由交流、发表成果——以前科学被教会控制。</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.32-33</strong>（教材 p.32-33）</p>
+    <ul>
+      <li>(b) Major developments — 找到四位科学家的描述</li>
+      <li><strong>p.33</strong> History IN DEPTH: Newton and the Clockwork Universe Theory</li>
+    </ul>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> Who proposed the law of universal gravitation?</p>
+      <p><strong>A:</strong> <strong>Newton</strong>.</p>
+      <hr>
+      <p><strong>Q:</strong> What did Harvey discover?</p>
+      <p><strong>A:</strong> <strong>Blood circulation</strong>（血液循环）.</p>
+      <hr>
+      <p><strong>Q:</strong> What is the Royal Society? Why was it important?</p>
+      <p><strong>A:</strong> An independent scientific organization founded in <strong>1660</strong>. It provided a platform for scientists to share ideas freely, no longer controlled by the Church.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 3 ============ -->
+<div class="segment" id="s3">
+  <h2>Segment 3 · Scientific Revolution — 影响（Impact） <span class="tag tag-time">15min</span></h2>
+
+  <p>记三个关键词：</p>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>关键词</th><th>中文</th><th>英文解释</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>①</td><td><strong>Changed mindset</strong></td><td>改变思维方式</td>
+        <td>Europeans became <strong>rational</strong>（理性）and <strong>skeptical</strong>（怀疑）. They no longer blindly followed the Church.</td>
+      </tr>
+      <tr>
+        <td>②</td><td><strong>Laid foundation for Industrial Revolution</strong></td><td>为工业革命奠定基础</td>
+        <td>Scientific theories were applied to <strong>production</strong> and <strong>technology</strong>.</td>
+      </tr>
+      <tr>
+        <td>③</td><td><strong>Led to the Enlightenment</strong></td><td>推动了启蒙运动</td>
+        <td>If nature has <strong>laws</strong>, society also has <strong>laws</strong> we can discover through reason.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.34</strong>（教材 p.34）—— (c) Impact of the Scientific Revolution</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ Segment 1-3 总自检</summary>
+    <div class="answer">
+      <p><strong>Q1:</strong> What was the Scientific Revolution?</p>
+      <p><strong>A:</strong> A major breakthrough in scientific theories in the <strong>17th century</strong>, where Europeans shifted from Church authority to observation and experiment.</p>
+      <hr>
+      <p><strong>Q2:</strong> Name the four scientists and one achievement each.</p>
+      <p><strong>A:</strong> <strong>Kepler</strong> — planetary motion; <strong>Harvey</strong> — blood circulation; <strong>Boyle</strong> — chemical elements; <strong>Newton</strong> — universal gravitation.</p>
+      <hr>
+      <p><strong>Q3:</strong> What is the Clockwork Universe Theory?</p>
+      <p><strong>A:</strong> Newton's idea that the universe is like a clock — every change follows fixed laws that humans can discover.</p>
+      <hr>
+      <p><strong>Q4:</strong> What were TWO impacts of the Scientific Revolution?</p>
+      <p><strong>A:</strong> (1) It changed Europeans' mindset to rational thinking. (2) It led to the Enlightenment. (Also accepted: laid foundation for Industrial Revolution.)</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 4 ============ -->
+<div class="segment" id="s4">
+  <h2>Segment 4 · Enlightenment（启蒙运动）— 背景 + 核心概念 <span class="tag tag-time">15min</span></h2>
+
+  <h3>一句话理解</h3>
+  <div class="box-green">
+    <p><strong>Applying the Scientific Revolution's "rational thinking" to society and government.</strong></p>
+    <p style="color:var(--text-dim);">把科学革命的"理性思维"用到社会和政治问题上。</p>
+  </div>
+
+  <h3>逻辑链（必记！）</h3>
+  <div class="box-blue">
+    <p>Scientific Revolution → <em>Nature has laws</em>（自然有规律）</p>
+    <p style="padding-left:20px;">↓</p>
+    <p><strong>Enlightenment</strong> → <em>Society also has laws! We can use reason to find them.</em>（社会也有规律！可以用理性找出来）</p>
+    <p style="padding-left:20px;">↓</p>
+    <p>French Revolution → <em>Let's apply these ideas to overthrow bad government.</em></p>
+  </div>
+
+  <h3>核心概念（4个必记）</h3>
+
+  <table>
+    <thead>
+      <tr><th>English</th><th>中文</th><th>Core meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Natural rights</strong></td><td>自然权利</td>
+        <td>Rights you are born with: <strong>life, liberty, property</strong>（生命、自由、财产）. (John Locke)</td>
+      </tr>
+      <tr>
+        <td><strong>Social contract</strong></td><td>社会契约</td>
+        <td>An agreement between the <strong>people</strong> and the <strong>government</strong>. If the government breaks it, people can overthrow it. (Rousseau)</td>
+      </tr>
+      <tr>
+        <td><strong>Separation of powers</strong></td><td>三权分立</td>
+        <td>Power should be divided: <strong>executive</strong>（行政）, <strong>legislative</strong>（立法）, <strong>judicial</strong>（司法）. They check each other. (Montesquieu)</td>
+      </tr>
+      <tr>
+        <td><strong>Divine right of kings</strong></td><td>君权神授</td>
+        <td>The old idea that the king's authority comes from <strong>God</strong> — Enlightenment thinkers <strong>rejected</strong> this completely.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <details class="quiz">
+    <summary>✅ 核心一问</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> What's the connection between the Scientific Revolution and the Enlightenment?</p>
+      <p><strong>A:</strong> The Scientific Revolution found <strong>laws of nature</strong>. Enlightenment thinkers asked: <em>why can't we find <strong>laws of society</strong> too?</em> So they applied rational thinking to society and government.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 5 ============ -->
+<div class="segment" id="s5">
+  <h2>Segment 5 · Enlightenment — 五位思想家 <span class="tag tag-time">15min</span></h2>
+
+  <table>
+    <thead>
+      <tr><th>Thinker</th><th>中文</th><th>Core Idea</th><th>一句话记</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>John Locke</strong></td><td>洛克</td>
+        <td><strong>Natural rights</strong> — life, liberty, property. Government must <strong>protect</strong> these rights. If it doesn't, people can <strong>overthrow</strong> it.</td>
+        <td>"人民有权反抗坏政府"</td>
+      </tr>
+      <tr>
+        <td><strong>Montesquieu</strong></td><td>孟德斯鸠</td>
+        <td><strong>Separation of powers</strong> — divide government into three branches so no one has too much power.</td>
+        <td>"权力不能集中"</td>
+      </tr>
+      <tr>
+        <td><strong>Voltaire</strong></td><td>伏尔泰</td>
+        <td><strong>Freedom of speech</strong> and <strong>freedom of religion</strong>.</td>
+        <td>"我不同意你，但捍卫你说话的权利"</td>
+      </tr>
+      <tr>
+        <td><strong>Rousseau</strong></td><td>卢梭</td>
+        <td><strong>Social contract</strong> — people give up some freedom in exchange for protection. <strong>Popular sovereignty</strong> — power comes from the people.</td>
+        <td>"主权在民"</td>
+      </tr>
+      <tr>
+        <td><strong>Diderot</strong></td><td>狄德罗</td>
+        <td>Edited the <strong>Encyclopedia</strong>（《百科全书》）— collected all human knowledge in one place.</td>
+        <td>"把知识汇总起来"</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>记人名小技巧</h3>
+  <ul>
+    <li><strong>Locke</strong> 和 lock（锁）发音像 → 他把 natural rights "锁"住了，谁也不能拿走</li>
+    <li><strong>Montesquieu</strong> → "三"个音节 → 三权分立（separation of <strong>three</strong> powers）</li>
+    <li><strong>Voltaire</strong> → 像 voter（选民）→ 他提倡言论自由</li>
+    <li><strong>Rousseau</strong> → 像 society（社会）→ 社会契约</li>
+  </ul>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">教材 <strong>p.35-43</strong> —— 五位思想家的详细描述</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> Which thinker proposed the social contract?</p>
+      <p><strong>A:</strong> <strong>Rousseau</strong>.</p>
+      <hr>
+      <p><strong>Q:</strong> What is the separation of powers? Who proposed it?</p>
+      <p><strong>A:</strong> Power is divided into <strong>executive, legislative, judicial</strong> branches. Proposed by <strong>Montesquieu</strong>.</p>
+      <hr>
+      <p><strong>Q:</strong> What are the natural rights according to Locke?</p>
+      <p><strong>A:</strong> <strong>Life, liberty, and property</strong>.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 6 ============ -->
+<div class="segment" id="s6">
+  <h2>Segment 6 · Enlightenment — 影响 <span class="tag tag-time">15min</span></h2>
+
+  <h3>Impact（影响）— 三点</h3>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Impact</th><th>中文</th><th>解释</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>①</td>
+        <td><strong>Inspired the French Revolution</strong></td>
+        <td>启发了法国大革命</td>
+        <td>启蒙思想给了法国人民反抗的理论武器</td>
+      </tr>
+      <tr>
+        <td>②</td>
+        <td><strong>Spread democracy, human rights, constitutional government</strong></td>
+        <td>推动民主、人权、宪政</td>
+        <td>自然权利、社会契约等观念在欧洲传播</td>
+      </tr>
+      <tr>
+        <td>③</td>
+        <td><strong>Liberty, Equality, Fraternity</strong></td>
+        <td>自由、平等、博爱</td>
+        <td>这三个词成了 French Revolution 的口号</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Enlightenment → French Revolution 的关系（常考！）</h3>
+  <div class="box-green">
+    <p><strong>Enlightenment ideas:</strong></p>
+    <ul>
+      <li>Natural rights (Locke)</li>
+      <li>Social contract (Rousseau)</li>
+      <li>Separation of powers (Montesquieu)</li>
+      <li>Freedom (Voltaire)</li>
+    </ul>
+    <p style="margin-top:8px;">↓ <em>French people asked: "Why do we have an absolute monarchy? Why does the king have all the power?"</em></p>
+    <p style="margin-top:8px;">↓</p>
+    <p><strong>French Revolution (1789):</strong> Let's overthrow the king and build a new society!</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">教材 <strong>p.35-43</strong> —— Enlightenment 部分</p>
+  </div>
+</div>
+
+<!-- ============ SEGMENT 7 ============ -->
+<div class="segment" id="s7">
+  <h2>Segment 7 · Day 1 复习自测 <span class="tag tag-time">15min</span></h2>
+
+  <h3>Part A — 填空题</h3>
+  <p>用英文填：</p>
+  <ol>
+    <li>The Scientific Revolution took place in the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> century.</li>
+    <li>The idea that the universe is like a great clock is called the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> Theory.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> discovered blood circulation in the human body.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> proposed the law of universal gravitation.</li>
+    <li>The Enlightenment applied <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> thinking to society and government.</li>
+    <li>Locke believed in <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> rights: life, liberty, and property.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> proposed the separation of powers.</li>
+    <li>Rousseau believed in the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> between the people and the government.</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 Part A 答案</summary>
+    <div class="answer">
+      <ol>
+        <li><strong>17th</strong></li>
+        <li><strong>Clockwork Universe</strong></li>
+        <li><strong>Harvey</strong></li>
+        <li><strong>Newton</strong></li>
+        <li><strong>rational</strong></li>
+        <li><strong>natural</strong></li>
+        <li><strong>Montesquieu</strong></li>
+        <li><strong>social contract</strong></li>
+      </ol>
+    </div>
+  </details>
+
+  <h3 style="margin-top:20px;">Part B — 配对题</h3>
+  <p>Match the thinker with his idea:</p>
+
+  <div class="two-col">
+    <div>
+      <p><strong>Thinker</strong></p>
+      <ol>
+        <li>Kepler &nbsp; ____</li>
+        <li>Harvey &nbsp; ____</li>
+        <li>Newton &nbsp; ____</li>
+        <li>Boyle &nbsp; ____</li>
+        <li>Locke &nbsp; ____</li>
+        <li>Montesquieu &nbsp; ____</li>
+        <li>Rousseau &nbsp; ____</li>
+        <li>Voltaire &nbsp; ____</li>
+        <li>Diderot &nbsp; ____</li>
+      </ol>
+    </div>
+    <div>
+      <p><strong>Idea</strong></p>
+      <ol type="a">
+        <li>Law of universal gravitation</li>
+        <li>Natural rights</li>
+        <li>Chemical elements</li>
+        <li>Social contract</li>
+        <li>Blood circulation</li>
+        <li>Encyclopedia</li>
+        <li>Laws of planetary motion</li>
+        <li>Separation of powers</li>
+        <li>Freedom of speech and religion</li>
+      </ol>
+    </div>
+  </div>
+
+  <details class="quiz">
+    <summary>🔑 Part B 答案</summary>
+    <div class="answer">
+      <p>1-<strong>g</strong>, 2-<strong>e</strong>, 3-<strong>a</strong>, 4-<strong>c</strong>, 5-<strong>b</strong>, 6-<strong>h</strong>, 7-<strong>d</strong>, 8-<strong>i</strong>, 9-<strong>f</strong></p>
+    </div>
+  </details>
+
+  <h3 style="margin-top:20px;">Part C — 简答</h3>
+  <p>用英文写完整句：</p>
+  <ol>
+    <li>What was one cause of the Scientific Revolution?</li>
+    <li>Why did the Enlightenment happen AFTER the Scientific Revolution?</li>
+    <li>What is the Clockwork Universe Theory? Why was it important?</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 Part C 参考回答</summary>
+    <div class="answer">
+      <p><strong>1.</strong> One cause was the <strong>Voyages of Discovery</strong>, which proved that the Earth was round and challenged traditional theories.</p>
+      <hr>
+      <p><strong>2.</strong> The Scientific Revolution taught Europeans to use <strong>reason</strong> to find <strong>laws of nature</strong>. Enlightenment thinkers then applied this same <strong>rational thinking</strong> to <strong>society and government</strong>, asking: "What are the laws of society?"</p>
+      <hr>
+      <p><strong>3.</strong> The Clockwork Universe Theory was Newton's idea that the universe is like a <strong>clock</strong> — every change follows fixed laws. It was important because it showed that humans could <strong>discover the laws of nature through reason</strong>, which encouraged rational thinking and led to the Enlightenment.</p>
+    </div>
+  </details>
+</div>
+
+<footer>
+  <p>Topic 5 · The Rise of Modern Europe — Day 1: Scientific Revolution &amp; Enlightenment</p>
+  <p>教材: Journey Through History (Topic-based Series) &nbsp;|&nbsp; OCR文本: topic5_modern_europe_ocr.txt</p>
+</footer>
+
+</div><!-- /container -->
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 2 · Industrial Revolution · 复习</title>
+<style>
+  :root {
+    --bg: #f8f9fa; --card: #ffffff; --accent: #2563eb;
+    --accent-light: #dbeafe; --green: #059669; --green-light: #d1fae5;
+    --orange: #d97706; --orange-light: #fef3c7; --red: #dc2626;
+    --red-light: #fee2e2; --text: #1e293b; --text-dim: #64748b;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7; padding: 0;
+  }
+  .topbar {
+    background: var(--accent); color: white; padding: 20px 24px; text-align: center;
+  }
+  .topbar h1 { font-size: 1.6em; margin-bottom: 4px; }
+  .topbar p { font-size: 0.92em; opacity: 0.9; }
+  .container { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
+  .seg-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; justify-content: center; }
+  .seg-nav a {
+    display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.82em;
+    text-decoration: none; font-weight: 600; background: var(--border); color: var(--text-dim);
+    transition: 0.2s;
+  }
+  .seg-nav a:hover { background: var(--accent-light); color: var(--accent); }
+  .segment {
+    background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+    padding: 24px; margin-bottom: 20px;
+  }
+  .segment h2 { font-size: 1.2em; color: var(--accent); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent-light); }
+  .segment h3 { font-size: 1.05em; margin: 16px 0 8px; }
+  .segment h4 { font-size: 0.95em; margin: 12px 0 6px; }
+  .segment p { margin: 6px 0; }
+  .segment ul, .segment ol { margin: 6px 0 6px 20px; }
+  .segment li { margin: 4px 0; }
+  .box-blue { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .box-green { background: var(--green-light); border-left: 4px solid var(--green); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .box-orange { background: var(--orange-light); border-left: 4px solid var(--orange); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .box-red { background: var(--red-light); border-left: 4px solid var(--red); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9em; }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--accent-light); font-weight: 600; color: var(--accent); }
+  tr:nth-child(even) { background: var(--bg); }
+  .keyword { display: inline-block; background: var(--accent-light); padding: 1px 8px; border-radius: 4px; font-weight: 600; }
+  details.quiz { margin: 10px 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  details.quiz summary { padding: 10px 14px; background: var(--bg); cursor: pointer; font-weight: 600; font-size: 0.95em; }
+  details.quiz summary:hover { background: var(--accent-light); }
+  details.quiz .answer { padding: 12px 14px; background: var(--green-light); border-top: 1px solid var(--border); }
+  .tag { display: inline-block; font-size: 0.75em; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-weight: 600; }
+  .tag-time { background: #ede9fe; color: #6d28d9; }
+  .tag-book { background: #fce7f3; color: #be185d; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+  footer { text-align: center; padding: 20px; color: var(--text-dim); font-size: 0.85em; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>🏭 Topic 5 · The Rise of Modern Europe</h1>
+  <p>Day 2 · The Industrial Revolution · 工业革命</p>
+  <p style="margin-top:6px;font-size:0.85em;opacity:0.8;">
+    ⏱ 约 1h45min &nbsp;|&nbsp; 📍 OCR p.35-64 / 教材 p.44-63
+  </p>
+</div>
+
+<div class="container">
+
+<div class="seg-nav">
+  <a href="#s1">S1 核心概念</a>
+  <a href="#s2">S2 五大原因</a>
+  <a href="#s3">S3 Why Britain?</a>
+  <a href="#s4">S4 重要发明</a>
+  <a href="#s5">S5 影响</a>
+  <a href="#s6">S6 复习自测</a>
+</div>
+
+<!-- ============ SEGMENT 1 ============ -->
+<div class="segment" id="s1">
+  <h2>Segment 1 · 核心概念 <span class="tag tag-time">15min</span></h2>
+
+  <h3>一句话理解</h3>
+  <div class="box-green">
+    <p><strong>The Industrial Revolution</strong> was the shift from <strong>hand production</strong> to <strong>machine production</strong> in the <strong>mid-18th century</strong>.</p>
+    <p style="color:var(--text-dim);">工业革命是18世纪中叶从手工生产转向机器生产的变革。</p>
+  </div>
+
+  <h3>五个关键术语</h3>
+
+  <table>
+    <thead>
+      <tr><th>English</th><th>中文</th><th>Core meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Industrial Revolution</strong></td><td>工业革命</td>
+        <td>Mid-18th century — shift from hand-making to machine-making</td>
+      </tr>
+      <tr>
+        <td><strong>Steam engine</strong></td><td>蒸汽机</td>
+        <td>James Watt's invention — the <strong>driving force</strong> behind the whole revolution</td>
+      </tr>
+      <tr>
+        <td><strong>Factory system</strong></td><td>工厂制度</td>
+        <td>Workers come to a central place to work with machines, instead of working at home</td>
+      </tr>
+      <tr>
+        <td><strong>Urbanization</strong></td><td>城市化</td>
+        <td>People moved from the <strong>countryside</strong>（农村）to <strong>cities</strong>（城市）to work in factories</td>
+      </tr>
+      <tr>
+        <td><strong>Capitalism</strong></td><td>资本主义</td>
+        <td>Economic system based on <strong>private ownership</strong> and <strong>profit</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-blue">
+    <p><strong>💡 记住关键对比：</strong></p>
+    <p>Before IR: People made things <strong>at home by hand</strong>（在家手工做）</p>
+    <p>After IR: People made things <strong>in factories with machines</strong>（在工厂用机器做）</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> What is the Industrial Revolution?</p>
+      <p><strong>A:</strong> The shift from <strong>hand production</strong> to <strong>machine production</strong> starting in the <strong>mid-18th century</strong>.</p>
+      <hr>
+      <p><strong>Q:</strong> What is the factory system?</p>
+      <p><strong>A:</strong> Workers come to a central place to work with machines, instead of working at home.</p>
+      <hr>
+      <p><strong>Q:</strong> What does "urbanization" mean?</p>
+      <p><strong>A:</strong> People moving from the countryside to cities.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 2 ============ -->
+<div class="segment" id="s2">
+  <h2>Segment 2 · Industrial Revolution 的五大原因 <span class="tag tag-time">20min</span></h2>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Cause（原因）</th><th>中文</th><th>Explanation</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>①</td>
+        <td><strong>Agricultural Revolution</strong></td>
+        <td>农业革命</td>
+        <td>New farming methods → more food → <strong>population grew</strong> → more workers + more demand for goods</td>
+      </tr>
+      <tr>
+        <td>②</td>
+        <td><strong>Abundant natural resources</strong></td>
+        <td>丰富的自然资源</td>
+        <td>Britain had lots of <strong>coal</strong>（煤炭）to power steam engines and <strong>iron</strong>（铁）to build machines</td>
+      </tr>
+      <tr>
+        <td>③</td>
+        <td><strong>Colonial trade &amp; capital</strong></td>
+        <td>殖民贸易与资本积累</td>
+        <td>Colonies provided raw materials + markets. Merchants made huge profits and <strong>invested</strong> in machines</td>
+      </tr>
+      <tr>
+        <td>④</td>
+        <td><strong>Scientific advancement</strong></td>
+        <td>科学进步</td>
+        <td>Scientific Revolution → new knowledge → applied to <strong>practical production</strong> and technology</td>
+      </tr>
+      <tr>
+        <td>⑤</td>
+        <td><strong>Stable government</strong></td>
+        <td>稳定的政府</td>
+        <td>Britain had a stable political system that <strong>protected private property</strong> and encouraged business</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.35-37</strong>（教材 p.44-46）—— 读每个原因的详细解释</p>
+    <ul>
+      <li>(a) Rise in population</li>
+      <li>(b) Development of world trade</li>
+      <li>(c) Accumulation of capital</li>
+      <li>(d) Development and application of science</li>
+      <li>(e) Government encouragement</li>
+    </ul>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> Name three causes of the Industrial Revolution.</p>
+      <p><strong>A:</strong> (Any three:) Agricultural Revolution, abundant natural resources, colonial trade, scientific advancement, stable government.</p>
+      <hr>
+      <p><strong>Q:</strong> How did the Agricultural Revolution help cause the Industrial Revolution?</p>
+      <p><strong>A:</strong> Better farming → more food → population grew → more workers + more demand for goods.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 3 ============ -->
+<div class="segment" id="s3">
+  <h2>Segment 3 · Why Britain?（为什么是英国？） <span class="tag tag-time">15min</span></h2>
+
+  <div class="box-red">
+    <p><strong>⚠️ 常考！几乎每年必出</strong> — "Why did the Industrial Revolution start in Britain?"</p>
+  </div>
+
+  <p>工业革命没有在法国、德国、意大利开始，而是在英国。记住这 <strong>五点</strong>：</p>
+
+  <table>
+    <thead>
+      <tr><th>Factor</th><th>中文</th><th>具体内容</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🏭 <strong>Coal &amp; Iron</strong></td><td>煤和铁</td>
+        <td>Britain had <strong>rich deposits</strong> of coal (to power steam engines) and iron (to build machines)</td>
+      </tr>
+      <tr>
+        <td>🏦 <strong>Banking system</strong></td><td>银行体系</td>
+        <td>Britain had a highly <strong>developed banking system</strong>. Rich people could invest money in new machines and factories</td>
+      </tr>
+      <tr>
+        <td>🌍 <strong>Colonial market</strong></td><td>殖民地市场</td>
+        <td>Britain had a <strong>large colonial empire</strong>. Colonies provided cheap raw materials AND bought British goods</td>
+      </tr>
+      <tr>
+        <td>🏛️ <strong>Stable politics</strong></td><td>政治稳定</td>
+        <td>Britain had a <strong>stable government</strong> that protected <strong>private property</strong> and supported business</td>
+      </tr>
+      <tr>
+        <td>🧵 <strong>Textile advances</strong></td><td>纺织技术进步</td>
+        <td>Britain already had <strong>advanced textile machinery</strong> (spinning jenny etc.), which gave it a head start</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-green">
+    <p><strong>📝 记忆口诀 — 5个关键词：</strong></p>
+    <p><strong>Coal · Banks · Colonies · Stability · Textiles</strong></p>
+    <p style="color:var(--text-dim);">煤 · 银行 · 殖民地 · 稳定 · 纺织</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR 找 "Why did the Industrial Revolution start in Britain?" <strong>p.36附近</strong></p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> Why did the Industrial Revolution start in Britain? Give at least 3 reasons.</p>
+      <p><strong>A:</strong> (1) Rich <strong>coal and iron</strong> deposits. (2) A developed <strong>banking system</strong>. (3) A large <strong>colonial market</strong>. (Also: stable government, textile advances.)</p>
+      <hr>
+      <p><strong>Q:</strong> How did the colonial market help Britain's Industrial Revolution?</p>
+      <p><strong>A:</strong> Colonies provided cheap raw materials (e.g. cotton) AND bought finished British goods, creating a huge market.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 4 ============ -->
+<div class="segment" id="s4">
+  <h2>Segment 4 · 重要发明 <span class="tag tag-time">15min</span></h2>
+
+  <table>
+    <thead>
+      <tr><th>Invention</th><th>Inventor</th><th>中文</th><th>作用</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Steam engine</strong></td>
+        <td>James <strong>Watt</strong>（瓦特）</td>
+        <td>蒸汽机</td>
+        <td>The <strong>driving force</strong> of the Industrial Revolution. Powered factories, railways, and ships</td>
+      </tr>
+      <tr>
+        <td><strong>Spinning jenny</strong></td>
+        <td>Hargreaves（哈格里夫斯）</td>
+        <td>珍妮纺纱机</td>
+        <td>Spun thread much <strong>faster</strong> than by hand. Revolutionized the textile industry</td>
+      </tr>
+      <tr>
+        <td><strong>Railways</strong></td>
+        <td>Stephenson（斯蒂芬森）</td>
+        <td>铁路</td>
+        <td>Allowed <strong>fast transport</strong> of goods and people. Connected factories to markets</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-blue">
+    <p><strong>💡 时代划分：</strong>The early Industrial Revolution (1760-1830) was called the <strong>"Steam Age"（蒸汽时代）</strong>. Steam power was everything!</p>
+  </div>
+
+  <h3>工业革命的发展顺序</h3>
+  <div class="box-green">
+    <p><strong>Textile industry（纺织业）</strong> was the <strong>first</strong> to change.</p>
+    <p style="padding-left:20px;">↓</p>
+    <p><strong>Steam engine</strong> provided power → factories could be anywhere, not just near rivers</p>
+    <p style="padding-left:20px;">↓</p>
+    <p><strong>Railways</strong> transformed transport → raw materials in, finished goods out</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.40-50</strong>（教材 p.49-59）—— Major developments during the Industrial Revolution</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> Who improved the steam engine? What was its importance?</p>
+      <p><strong>A:</strong> <strong>James Watt</strong>. It was the driving force of the Industrial Revolution — it powered factories, railways, and ships.</p>
+      <hr>
+      <p><strong>Q:</strong> Which industry was the FIRST to change during the Industrial Revolution?</p>
+      <p><strong>A:</strong> The <strong>textile industry</strong>（纺织业）.</p>
+      <hr>
+      <p><strong>Q:</strong> What did the spinning jenny do?</p>
+      <p><strong>A:</strong> It spun thread <strong>much faster</strong> than hand spinning, revolutionizing textile production.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 5 ============ -->
+<div class="segment" id="s5">
+  <h2>Segment 5 · 工业革命的影响（Impact） <span class="tag tag-time">20min</span></h2>
+
+  <p>从 <strong>三个方面</strong> 记：Economic · Social · Technological</p>
+
+  <table>
+    <thead>
+      <tr><th>Aspect</th><th>中文</th><th>Positive（正面）</th><th>Negative（负面）</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Economic</strong></td><td>经济</td>
+        <td>
+          • <strong>Mass production</strong>（大规模生产）— more goods, cheaper<br>
+          • Growth of <strong>capitalism</strong>（资本主义发展）<br>
+          • Global trade expanded
+        </td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><strong>Social</strong></td><td>社会</td>
+        <td>
+          • <strong>Urbanization</strong>（城市化）— cities grew<br>
+          • Rise of <strong>middle class</strong>（中产阶级兴起）
+        </td>
+        <td>
+          • <strong>Child labour</strong>（童工）— children worked in dangerous conditions<br>
+          • <strong>Poor working conditions</strong>（恶劣工作环境）— long hours, low pay<br>
+          • <strong>Pollution</strong>（污染）— coal smoke filled cities
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Technological</strong></td><td>技术</td>
+        <td>
+          • <strong>European technological supremacy</strong>（欧洲技术领先全球）<br>
+          • Faster transport (railways, steamships)
+        </td>
+        <td>
+          • <strong>Pollution</strong> from coal and factories
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-blue">
+    <p><strong>💡 回答 "Impact" 问题的万能结构：</strong></p>
+    <p>First, <strong>economically</strong>, ... (mass production, capitalism)</p>
+    <p>Second, <strong>socially</strong>, ... (urbanization, middle class. However, there was also child labour and pollution.)</p>
+    <p>Third, <strong>technologically</strong>, ... (European supremacy in technology)</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.50-64</strong>（教材 p.59-63）—— 工业革命影响的详细讨论</p>
+  </div>
+</div>
+
+<!-- ============ SEGMENT 6 ============ -->
+<div class="segment" id="s6">
+  <h2>Segment 6 · Day 2 复习自测 <span class="tag tag-time">20min</span></h2>
+
+  <h3>Part A — 填空题</h3>
+  <ol>
+    <li>The Industrial Revolution started in the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> century.</li>
+    <li>It began in <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> improved the steam engine.</li>
+    <li>The early Industrial Revolution is also called the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> Age.</li>
+    <li>The <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> industry was the FIRST to change.</li>
+    <li>People moving from countryside to cities is called <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>.</li>
+    <li>Working in a central place with machines is called the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> system.</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 Part A 答案</summary>
+    <div class="answer">
+      <ol>
+        <li><strong>18th</strong> (mid-18th century)</li>
+        <li><strong>Britain</strong></li>
+        <li><strong>James Watt</strong></li>
+        <li><strong>Steam</strong></li>
+        <li><strong>textile</strong></li>
+        <li><strong>urbanization</strong></li>
+        <li><strong>factory</strong></li>
+      </ol>
+    </div>
+  </details>
+
+  <h3 style="margin-top:20px;">Part B — 简答（用英文写完整句）</h3>
+  <ol>
+    <li>Give <strong>three</strong> causes of the Industrial Revolution.</li>
+    <li>Why did the Industrial Revolution start in <strong>Britain</strong>? (give 3-4 reasons)</li>
+    <li>What was the importance of Watt's steam engine?</li>
+    <li>What were <strong>two positive</strong> and <strong>two negative</strong> impacts of the Industrial Revolution?</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 Part B 参考回答</summary>
+    <div class="answer">
+      <p><strong>1.</strong> Three causes: (a) The <strong>Agricultural Revolution</strong> increased food production and population. (b) <strong>Abundant natural resources</strong> like coal and iron in Britain. (c) <strong>Colonial trade</strong> provided capital for investment.</p>
+      <hr>
+      <p><strong>2.</strong> Britain had (a) rich <strong>coal and iron</strong>, (b) a developed <strong>banking system</strong>, (c) a large <strong>colonial market</strong>, (d) a <strong>stable political system</strong>, and (e) advances in <strong>textile machinery</strong>.</p>
+      <hr>
+      <p><strong>3.</strong> The steam engine provided <strong>power</strong> for factories, railways, and ships. It was the <strong>driving force</strong> of the Industrial Revolution.</p>
+      <hr>
+      <p><strong>4.</strong> <strong>Positive:</strong> (1) Mass production made goods cheaper. (2) Urbanization and the rise of the middle class. <strong>Negative:</strong> (1) Child labour. (2) Pollution from coal and factories.</p>
+    </div>
+  </details>
+
+  <h3 style="margin-top:20px;">Part C — 配对题</h3>
+  <div class="two-col">
+    <div>
+      <p><strong>Item</strong></p>
+      <ol>
+        <li>James Watt &nbsp; ____</li>
+        <li>Spinning jenny &nbsp; ____</li>
+        <li>Urbanization &nbsp; ____</li>
+        <li>Britain advantage &nbsp; ____</li>
+        <li>Agricultural Rev &nbsp; ____</li>
+      </ol>
+    </div>
+    <div>
+      <p><strong>Description</strong></p>
+      <ol type="a">
+        <li>People move to cities</li>
+        <li>Improved steam engine</li>
+        <li>More food → population growth</li>
+        <li>Faster spinning of thread</li>
+        <li>Rich coal and iron deposits</li>
+      </ol>
+    </div>
+  </div>
+
+  <details class="quiz">
+    <summary>🔑 Part C 答案</summary>
+    <div class="answer">
+      <p>1-<strong>b</strong>, 2-<strong>d</strong>, 3-<strong>a</strong>, 4-<strong>e</strong>, 5-<strong>c</strong></p>
+    </div>
+  </details>
+</div>
+
+<footer>
+  <p>Topic 5 · The Rise of Modern Europe — Day 2: The Industrial Revolution</p>
+  <p>教材: Journey Through History (Topic-based Series)</p>
+</footer>
+
+</div><!-- /container -->
+</body>
+</html>

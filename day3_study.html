@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 3 · French Revolution + 总复习</title>
+<style>
+  :root {
+    --bg: #f8f9fa; --card: #ffffff; --accent: #2563eb;
+    --accent-light: #dbeafe; --green: #059669; --green-light: #d1fae5;
+    --orange: #d97706; --orange-light: #fef3c7; --red: #dc2626;
+    --red-light: #fee2e2; --text: #1e293b; --text-dim: #64748b;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7; padding: 0;
+  }
+  .topbar {
+    background: var(--accent); color: white; padding: 20px 24px; text-align: center;
+  }
+  .topbar h1 { font-size: 1.6em; margin-bottom: 4px; }
+  .topbar p { font-size: 0.92em; opacity: 0.9; }
+  .container { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
+  .seg-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; justify-content: center; }
+  .seg-nav a {
+    display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.82em;
+    text-decoration: none; font-weight: 600; background: var(--border); color: var(--text-dim); transition: 0.2s;
+  }
+  .seg-nav a:hover { background: var(--accent-light); color: var(--accent); }
+  .segment {
+    background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+    padding: 24px; margin-bottom: 20px;
+  }
+  .segment h2 { font-size: 1.2em; color: var(--accent); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent-light); }
+  .segment h3 { font-size: 1.05em; margin: 16px 0 8px; }
+  .segment h4 { font-size: 0.95em; margin: 12px 0 6px; }
+  .segment p { margin: 6px 0; }
+  .segment ul, .segment ol { margin: 6px 0 6px 20px; }
+  .segment li { margin: 4px 0; }
+  .box-blue { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .box-green { background: var(--green-light); border-left: 4px solid var(--green); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .box-orange { background: var(--orange-light); border-left: 4px solid var(--orange); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  .box-red { background: var(--red-light); border-left: 4px solid var(--red); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9em; }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--accent-light); font-weight: 600; color: var(--accent); }
+  tr:nth-child(even) { background: var(--bg); }
+  .keyword { display: inline-block; background: var(--accent-light); padding: 1px 8px; border-radius: 4px; font-weight: 600; }
+  details.quiz { margin: 10px 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  details.quiz summary { padding: 10px 14px; background: var(--bg); cursor: pointer; font-weight: 600; font-size: 0.95em; }
+  details.quiz summary:hover { background: var(--accent-light); }
+  details.quiz .answer { padding: 12px 14px; background: var(--green-light); border-top: 1px solid var(--border); }
+  .tag { display: inline-block; font-size: 0.75em; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-weight: 600; }
+  .tag-time { background: #ede9fe; color: #6d28d9; }
+  .tag-book { background: #fce7f3; color: #be185d; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+  footer { text-align: center; padding: 20px; color: var(--text-dim); font-size: 0.85em; }
+  .flow { text-align: center; padding: 16px; font-size: 0.95em; }
+  .flow p { margin: 6px 0; }
+  .arrow { color: var(--accent); font-size: 1.2em; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>🇫🇷 Topic 5 · The Rise of Modern Europe</h1>
+  <p>Day 3 · French Revolution + 总复习</p>
+  <p style="margin-top:6px;font-size:0.85em;opacity:0.8;">
+    ⏱ 约 1h45min + 45min练习 &nbsp;|&nbsp; 📍 OCR p.65-88 / 教材 p.64-88
+  </p>
+</div>
+
+<div class="container">
+
+<div class="seg-nav">
+  <a href="#s1">S1 背景+三个等级</a>
+  <a href="#s2">S2 五大原因</a>
+  <a href="#s3">S3 时间线+人物</a>
+  <a href="#s4">S4 影响</a>
+  <a href="#s5">S5 跨章节总复习</a>
+  <a href="#s6">S6 考试练习</a>
+  <a href="#s7">S7 总自测</a>
+</div>
+
+<!-- ============ SEGMENT 1 ============ -->
+<div class="segment" id="s1">
+  <h2>Segment 1 · French Revolution — 背景 + Three Estates <span class="tag tag-time">15min</span></h2>
+
+  <h3>一句话理解</h3>
+  <div class="box-green">
+    <p><strong>The French Revolution (1789)</strong> was a political revolution in France. The French people overthrew the <strong>absolute monarchy</strong> and fought for <strong>liberty, equality, and fraternity</strong>.</p>
+    <p style="color:var(--text-dim);">法国人民推翻了君主专制，追求自由、平等、博爱。</p>
+  </div>
+
+  <h3>核心概念</h3>
+  <table>
+    <thead>
+      <tr><th>English</th><th>中文</th><th>Core meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Ancien Régime</strong></td><td>旧制度</td><td>The social and political system in France before 1789</td></tr>
+      <tr><td><strong>Absolute monarchy</strong></td><td>君主专制</td><td>King has unlimited power — no constitution, no parliament to stop him</td></tr>
+      <tr><td><strong>Estate</strong></td><td>等级</td><td>French society was divided into three Estates（三个等级）</td></tr>
+      <tr><td><strong>Constitutional monarchy</strong></td><td>君主立宪</td><td>King's power is limited by a constitution（宪法）</td></tr>
+      <tr><td><strong>Republic</strong></td><td>共和政体</td><td>No monarchy; leaders are elected by the people</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Three Estates（三个等级）— 极重要！常考！</h3>
+
+  <table>
+    <thead>
+      <tr><th>Estate</th><th>成员</th><th>人口比例</th><th>交税？</th><th>权力</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>First Estate</strong></td><td>Clergy（教士/神职人员）</td>
+        <td>~1%</td>
+        <td>❌ 不用交税</td>
+        <td>Very powerful — controlled education and beliefs</td>
+      </tr>
+      <tr>
+        <td><strong>Second Estate</strong></td><td>Nobility（贵族）</td>
+        <td>~2%</td>
+        <td>❌ 不用交税</td>
+        <td>Held top government and military positions</td>
+      </tr>
+      <tr>
+        <td style="background:#fee2e2;"><strong>Third Estate</strong></td><td>Commoners（平民）</td>
+        <td>~97%</td>
+        <td>✅ <strong>承担全部税负</strong></td>
+        <td>Almost no political power</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-red">
+    <p><strong>💡 记忆关键：</strong> 最富的两个等级不交税，最穷的97%人口交全部税。这就是革命的根本原因！</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.65-68</strong>（教材 p.64-67）—— 读 Causes of the Revolution 部分</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> What was the Ancien Régime?</p>
+      <p><strong>A:</strong> The social and political system in France before the Revolution (1789).</p>
+      <hr>
+      <p><strong>Q:</strong> What were the Three Estates? Which one paid all the taxes?</p>
+      <p><strong>A:</strong> First Estate (clergy), Second Estate (nobility), Third Estate (commoners). The <strong>Third Estate</strong> paid all the taxes.</p>
+      <hr>
+      <p><strong>Q:</strong> What is the difference between absolute monarchy and constitutional monarchy?</p>
+      <p><strong>A:</strong> In an <strong>absolute monarchy</strong>, the king has unlimited power. In a <strong>constitutional monarchy</strong>, the king's power is limited by a constitution.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 2 ============ -->
+<div class="segment" id="s2">
+  <h2>Segment 2 · French Revolution 的五大原因 <span class="tag tag-time">15min</span></h2>
+
+  <div class="box-red">
+    <p><strong>⚠️ 常考！DBQ（资料题）最爱考原因分析</strong></p>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Cause</th><th>中文</th><th>详细解释</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>①</td>
+        <td><strong>Social inequality</strong></td>
+        <td>社会不平等</td>
+        <td>Three Estates system was <strong>unfair</strong>. The 3rd Estate (97% of people) had no privileges but paid all taxes</td>
+      </tr>
+      <tr>
+        <td>②</td>
+        <td><strong>Financial crisis</strong></td>
+        <td>财政危机</td>
+        <td>France was <strong>bankrupt</strong> from expensive wars — especially helping the American Revolution (支持美国独立战争)</td>
+      </tr>
+      <tr>
+        <td>③</td>
+        <td><strong>Enlightenment ideas</strong></td>
+        <td>启蒙思想</td>
+        <td>Ideas of <strong>liberty, equality, democracy</strong> (Locke, Rousseau, Montesquieu) inspired people to demand change</td>
+      </tr>
+      <tr>
+        <td>④</td>
+        <td><strong>Economic hardship</strong></td>
+        <td>经济困难</td>
+        <td>Bad harvests（歉收）→ food shortages → bread prices <strong>skyrocketed</strong>（暴涨）→ people were starving</td>
+      </tr>
+      <tr>
+        <td>⑤</td>
+        <td><strong>Weak leadership</strong></td>
+        <td>国王软弱</td>
+        <td><strong>Louis XVI</strong> was indecisive（优柔寡断）. He failed to solve France's financial and social problems</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box-blue">
+    <p><strong>📝 记忆口诀 — 5个关键词：</strong></p>
+    <p><strong>Inequality · Bankruptcy · Enlightenment · Hunger · Weak King</strong></p>
+    <p style="color:var(--text-dim);">不平等 · 破产 · 启蒙思想 · 饥饿 · 国王软弱</p>
+  </div>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.65-71</strong>（教材 p.64-70）—— 每个原因的详细解释</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> List three causes of the French Revolution.</p>
+      <p><strong>A:</strong> (1) <strong>Social inequality</strong> — the Three Estates system. (2) <strong>Financial crisis</strong> — France was bankrupt. (3) <strong>Enlightenment ideas</strong> — people were inspired by liberty and equality. (Also: economic hardship, weak leadership.)</p>
+      <hr>
+      <p><strong>Q:</strong> How did Enlightenment ideas contribute to the French Revolution?</p>
+      <p><strong>A:</strong> Thinkers like Locke (natural rights), Rousseau (social contract), and Montesquieu (separation of powers) inspired the French people to demand <strong>liberty, equality, and democracy</strong>.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 3 ============ -->
+<div class="segment" id="s3">
+  <h2>Segment 3 · 时间线 + 关键人物 <span class="tag tag-time">15min</span></h2>
+
+  <h3>关键事件时间线（考试常考顺序）</h3>
+
+  <table>
+    <thead>
+      <tr><th>年份</th><th>Event</th><th>中文</th><th>意义</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1789</strong></td><td>Fall of the <strong>Bastille</strong></td><td>攻占巴士底狱</td>
+        <td>🔴 <strong>Revolution started!</strong> People attacked the royal prison</td>
+      </tr>
+      <tr>
+        <td><strong>1789</strong></td><td>Declaration of the <strong>Rights of Man</strong></td><td>《人权宣言》</td>
+        <td>Declared "men are born free and equal in rights"</td>
+      </tr>
+      <tr>
+        <td><strong>1791</strong></td><td><strong>Constitutional monarchy</strong></td><td>建立君主立宪制</td>
+        <td>The king's power was now limited by law</td>
+      </tr>
+      <tr>
+        <td><strong>1792</strong></td><td>France became a <strong>republic</strong></td><td>法兰西第一共和国</td>
+        <td>The monarchy was abolished（废除）</td>
+      </tr>
+      <tr>
+        <td><strong>1793</strong></td><td>Louis XVI <strong>executed</strong></td><td>路易十六被处决</td>
+        <td>King was sent to the <strong>guillotine</strong>（断头台）</td>
+      </tr>
+      <tr>
+        <td><strong>1793-94</strong></td><td><strong>Reign of Terror</strong></td><td>恐怖统治</td>
+        <td><strong>Robespierre</strong> led a period of violence. Thousands were executed</td>
+      </tr>
+      <tr>
+        <td><strong>1799</strong></td><td><strong>Napoleon</strong> came to power</td><td>拿破仑上台</td>
+        <td>End of the Revolution. Napoleon became the ruler of France</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>关键人物</h3>
+
+  <table>
+    <thead>
+      <tr><th>Figure</th><th>角色</th><th>一句话记住</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Louis XVI</strong></td><td>Weak king（软弱国王）</td><td>Indecisive, failed to solve problems, <strong>executed in 1793</strong></td></tr>
+      <tr><td><strong>Marie Antoinette</strong></td><td>Queen（王后）</td><td>Unpopular ("Madame Deficit"), also executed</td></tr>
+      <tr><td><strong>Robespierre</strong></td><td>Leader of Reign of Terror</td><td>Led the <strong>Reign of Terror</strong> (1793-94), thousands guillotined</td></tr>
+      <tr><td><strong>Napoleon</strong></td><td>Military leader → Emperor</td><td>Came to power in <strong>1799</strong>, later became Emperor of France</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box-orange">
+    <span class="tag tag-book">📖 翻书</span>
+    <p style="margin-top:4px;">OCR <strong>p.72-88</strong>（教材 p.71-88）—— Revolution 的详细发展过程</p>
+  </div>
+
+  <details class="quiz">
+    <summary>✅ 快速自检</summary>
+    <div class="answer">
+      <p><strong>Q:</strong> What happened on July 14, 1789?</p>
+      <p><strong>A:</strong> The <strong>Fall of the Bastille</strong> — the start of the French Revolution.</p>
+      <hr>
+      <p><strong>Q:</strong> What was the Reign of Terror? Who led it?</p>
+      <p><strong>A:</strong> A period of violence (1793-94) led by <strong>Robespierre</strong>, during which thousands of people were executed by guillotine.</p>
+      <hr>
+      <p><strong>Q:</strong> What happened in 1799?</p>
+      <p><strong>A:</strong> <strong>Napoleon</strong> came to power, ending the Revolution.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 4 ============ -->
+<div class="segment" id="s4">
+  <h2>Segment 4 · French Revolution 的影响 <span class="tag tag-time">10min</span></h2>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Impact</th><th>中文</th><th>解释</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>①</td>
+        <td><strong>End of absolute monarchy</strong></td>
+        <td>终结君主专制</td>
+        <td>France would never again have a king with unlimited power</td>
+      </tr>
+      <tr>
+        <td>②</td>
+        <td><strong>Spread of ideas: liberty, equality, democracy</strong></td>
+        <td>传播自由、平等、民主理念</td>
+        <td>These ideas spread across Europe and inspired other revolutions</td>
+      </tr>
+      <tr>
+        <td>③</td>
+        <td><strong>Rise of nationalism</strong></td>
+        <td>民族主义兴起</td>
+        <td>People began to identify with their <strong>nation</strong>（民族/国家）, not just their king</td>
+      </tr>
+      <tr>
+        <td>④</td>
+        <td><strong>Inspired later revolutions</strong></td>
+        <td>启发后世革命</td>
+        <td>Other countries looked at France and demanded their own rights</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>🔗 关键链条：Enlightenment → French Revolution</h3>
+  <div class="box-green">
+    <div class="flow">
+      <p><strong>Enlightenment ideas:</strong></p>
+      <p>Natural rights (Locke) · Social contract (Rousseau) · Separation of powers (Montesquieu) · Freedom (Voltaire)</p>
+      <p class="arrow">⬇</p>
+      <p><em>French people asked: "Why do we have an absolute monarchy? Why does the king have all the power while we starve?"</em></p>
+      <p class="arrow">⬇</p>
+      <p><strong>French Revolution (1789):</strong> "Let's overthrow the king and build a society based on liberty, equality, and fraternity!"</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SEGMENT 5 ============ -->
+<div class="segment" id="s5">
+  <h2>Segment 5 · 跨章节总复习（The Big Picture）<span class="tag tag-time">20min</span></h2>
+
+  <h3>三大主题的关系链</h3>
+
+  <div class="box-blue">
+    <div class="flow">
+      <p><strong>Medieval Times</strong>（教会主导，神为中心）</p>
+      <p><em style="color:var(--text-dim);">（不是考试范围，但要知道背景）</em></p>
+      <p class="arrow">⬇</p>
+      <p><strong>Scientific Revolution</strong>（17世纪）</p>
+      <p>理性思维 · 科学方法 · Newton: 宇宙有规律（Clockwork Universe）</p>
+      <p class="arrow">⬇</p>
+      <p style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
+        <span><strong>Enlightenment</strong><br>理性应用到政治<br>Natural rights<br>Social contract<br>Separation of powers</span>
+        <span><strong>Industrial Revolution</strong><br>科学理论→实际应用<br>蒸汽机·工厂制度<br>Why Britain?<br>城市化·资本主义</span>
+      </p>
+      <p class="arrow">⬇</p>
+      <p><strong>French Revolution</strong>（1789）</p>
+      <p>自由、平等、博爱 · 推翻君主专制 · 建立共和</p>
+    </div>
+  </div>
+
+  <h3>常考对比题准备</h3>
+
+  <table>
+    <thead>
+      <tr><th>比较</th><th>核心区别</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Scientific Revolution vs Enlightenment</strong></td>
+        <td>Scientific Rev 研究<strong>自然</strong>规律；Enlightenment 把理性应用到<strong>社会政治</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Industrial Revolution vs French Revolution</strong></td>
+        <td>Industrial Rev 是<strong>技术</strong>革命（英国）；French Rev 是<strong>政治</strong>革命（法国）</td>
+      </tr>
+      <tr>
+        <td><strong>Enlightenment → French Revolution</strong></td>
+        <td>Enlightenment 给了人民<strong>反抗的理论武器</strong>（natural rights, social contract）</td>
+      </tr>
+      <tr>
+        <td><strong>Scientific Rev → Industrial Rev</strong></td>
+        <td>科学理论被<strong>应用到实际生产</strong>中</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>🤔 "大革命" 四问速查</h3>
+  <table>
+    <thead>
+      <tr><th>革命</th><th>时间</th><th>地点</th><th>核心是什么？</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Scientific Revolution</strong></td><td>17th c.</td><td>欧洲</td><td>科学方法、理性思维、自然法则</td></tr>
+      <tr><td><strong>Enlightenment</strong></td><td>17-18th c.</td><td>欧洲（法国为中心）</td><td>理性应用到社会政治</td></tr>
+      <tr><td><strong>Industrial Revolution</strong></td><td>mid-18th c.</td><td>始于英国</td><td>机器取代手工</td></tr>
+      <tr><td><strong>French Revolution</strong></td><td>1789</td><td>法国</td><td>自由、平等、博爱</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ============ SEGMENT 6 ============ -->
+<div class="segment" id="s6">
+  <h2>Segment 6 · 考试练习 <span class="tag tag-time">30min</span></h2>
+
+  <h3>考试题型及策略</h3>
+
+  <table>
+    <thead>
+      <tr><th>题型</th><th>策略</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Multiple Choice</strong></td>
+        <td>注意 "All of the above" / "Which of the following is NOT..."。用排除法：先划掉明显错的</td>
+      </tr>
+      <tr>
+        <td><strong>Short Answer</strong></td>
+        <td>直接回答，给出关键词即可。例：Q: "What was the Enlightenment?" → A: "An intellectual movement that applied reason to society and government."</td>
+      </tr>
+      <tr>
+        <td><strong>Data-based Question (DBQ)</strong></td>
+        <td>
+          ① 仔细阅读 source（文字/图片/图表）<br>
+          ② 从 source 中找出与问题相关的信息<br>
+          ③ <strong>结合自己的知识（own knowledge）</strong><br>
+          回答结构：<strong>Point → Evidence → Explanation</strong>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Essay</strong></td>
+        <td>
+          <strong>P.E.E.L.</strong> 结构：<br>
+          <strong>P</strong>oint（论点）→ <strong>E</strong>vidence（证据）→ <strong>E</strong>xplanation（解释）→ <strong>L</strong>ink（链接回问题）
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Data-based Question 练习</h3>
+
+  <div class="box-orange">
+    <p><strong>📄 Source:</strong> "The Third Estate bore all the burdens of the state. The nobles enjoyed privileges without contributing anything. The Church owned vast lands but paid no taxes."</p>
+    <p style="color:var(--text-dim);margin-top:4px;">— Adapted from Abbé Sieyès, What is the Third Estate? (1789)</p>
+  </div>
+
+  <ol>
+    <li>According to the source, which group paid all the taxes?</li>
+    <li>Which two groups paid no taxes?</li>
+    <li>How does this source help explain the causes of the French Revolution? Use your own knowledge.</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 参考回答</summary>
+    <div class="answer">
+      <p><strong>1.</strong> The <strong>Third Estate</strong> paid all the taxes.</p>
+      <p><strong>2.</strong> The <strong>First Estate</strong> (Clergy) and <strong>Second Estate</strong> (Nobility).</p>
+      <p><strong>3.</strong> This source shows the <strong>social inequality</strong> in France before the Revolution. The Third Estate (97% of the population) paid all the taxes while the clergy and nobility paid nothing. This unfair system was one of the main causes of the French Revolution. Enlightenment ideas about <strong>equality and natural rights</strong> (e.g. from Locke and Rousseau) made people question why they should accept this inequality. When combined with a financial crisis and bad harvests, the Third Estate demanded change — leading to the Revolution of 1789.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ============ SEGMENT 7 ============ -->
+<div class="segment" id="s7">
+  <h2>Segment 7 · 三天的终极大自测 <span class="tag tag-time">20min</span></h2>
+
+  <h3>Part A — 填空题</h3>
+  <ol>
+    <li>The Scientific Revolution took place in the <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> century.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> proposed the law of universal gravitation.</li>
+    <li>The Enlightenment applied <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> thinking to society and government.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> proposed the separation of powers.</li>
+    <li>The Industrial Revolution started in <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> in the mid-18th century.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> improved the steam engine.</li>
+    <li>The French Revolution started in the year <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>.</li>
+    <li>The <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> Estate paid all the taxes in pre-revolutionary France.</li>
+    <li>The Reign of Terror was led by <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>.</li>
+    <li><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> came to power in 1799, ending the French Revolution.</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 Part A 答案</summary>
+    <div class="answer">
+      <ol>
+        <li><strong>17th</strong></li>
+        <li><strong>Newton</strong></li>
+        <li><strong>rational</strong></li>
+        <li><strong>Montesquieu</strong></li>
+        <li><strong>Britain</strong></li>
+        <li><strong>James Watt</strong></li>
+        <li><strong>1789</strong></li>
+        <li><strong>Third</strong></li>
+        <li><strong>Robespierre</strong></li>
+        <li><strong>Napoleon</strong></li>
+      </ol>
+    </div>
+  </details>
+
+  <h3 style="margin-top:20px;">Part B — 简答（用英文写完整句）</h3>
+
+  <h4>Scientific Revolution:</h4>
+  <ol>
+    <li>What was the Scientific Revolution?</li>
+    <li>How did Newton's Clockwork Universe Theory change Europeans' thinking?</li>
+  </ol>
+
+  <h4>Enlightenment:</h4>
+  <ol start="3">
+    <li>What is the social contract? Which thinker proposed it?</li>
+    <li>Explain the separation of powers.</li>
+  </ol>
+
+  <h4>Industrial Revolution:</h4>
+  <ol start="5">
+    <li>Give three reasons why the Industrial Revolution started in Britain.</li>
+    <li>What were two positive and two negative impacts of the Industrial Revolution?</li>
+  </ol>
+
+  <h4>French Revolution:</h4>
+  <ol start="7">
+    <li>What were the Three Estates?</li>
+    <li>List three causes of the French Revolution.</li>
+    <li>What was the Reign of Terror?</li>
+  </ol>
+
+  <h4>Cross-topic:</h4>
+  <ol start="10">
+    <li>How did the Enlightenment contribute to the French Revolution?</li>
+    <li>Explain the connection between the Scientific Revolution and the Industrial Revolution.</li>
+  </ol>
+
+  <details class="quiz">
+    <summary>🔑 Part B 参考回答</summary>
+    <div class="answer">
+      <p><strong>1.</strong> The Scientific Revolution was a major breakthrough in scientific theories in the <strong>17th century</strong>, where Europeans shifted from Church authority to observation and experiment.</p>
+      <hr>
+      <p><strong>2.</strong> The Clockwork Universe Theory showed that the universe follows <strong>fixed laws</strong> that humans can discover through <strong>reason</strong>. This encouraged rational thinking and led to the Enlightenment.</p>
+      <hr>
+      <p><strong>3.</strong> The social contract is an agreement between the people and the government. If the government breaks it, people can overthrow it. It was proposed by <strong>Rousseau</strong>.</p>
+      <hr>
+      <p><strong>4.</strong> Separation of powers (Montesquieu) means dividing government into three branches: <strong>executive, legislative, and judicial</strong>. This prevents any one group from having too much power.</p>
+      <hr>
+      <p><strong>5.</strong> Britain had: (a) rich <strong>coal and iron</strong>, (b) a developed <strong>banking system</strong>, (c) a large <strong>colonial market</strong>, (d) a <strong>stable government</strong>, (e) advances in <strong>textile machinery</strong>.</p>
+      <hr>
+      <p><strong>6.</strong> <strong>Positive:</strong> Mass production made goods cheaper. Urbanization and the rise of the middle class. <strong>Negative:</strong> Child labour. Pollution from coal and factories.</p>
+      <hr>
+      <p><strong>7.</strong> The Three Estates were: First Estate (Clergy), Second Estate (Nobility), Third Estate (Commoners — 97% of the population).</p>
+      <hr>
+      <p><strong>8.</strong> Three causes: (1) Social inequality from the Three Estates system. (2) Financial crisis from expensive wars. (3) Enlightenment ideas about liberty and equality.</p>
+      <hr>
+      <p><strong>9.</strong> The Reign of Terror (1793-94) was a period of violence led by <strong>Robespierre</strong>, during which thousands of people were executed by guillotine.</p>
+      <hr>
+      <p><strong>10.</strong> Enlightenment thinkers proposed ideas like <strong>natural rights</strong> (Locke), <strong>social contract</strong> (Rousseau), and <strong>separation of powers</strong> (Montesquieu). These ideas inspired the French people to question absolute monarchy and demand <strong>liberty, equality, and democracy</strong>.</p>
+      <hr>
+      <p><strong>11.</strong> The Scientific Revolution developed <strong>scientific theories</strong> and a <strong>rational mindset</strong>. During the Industrial Revolution, these scientific theories were <strong>applied to practical production</strong> — for example, Newton's physics helped develop the steam engine. Science → technology → industry.</p>
+    </div>
+  </details>
+</div>
+
+<footer>
+  <p>Topic 5 · The Rise of Modern Europe — Day 3: French Revolution + 总复习</p>
+  <p>教材: Journey Through History (Topic-based Series)</p>
+</footer>
+
+</div><!-- /container -->
+</body>
+</html>
