@@ -5,6 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>History Study — Western History Topic 5</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .update-banner {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-left: 5px solid #f59e0b;
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: -20px 0 24px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .update-banner .date-badge {
+    background: #f59e0b;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .update-banner p { margin: 0; color: #92400e; }
+  .update-banner strong { color: #78350f; }
+  .section-head { display: flex; align-items: center; gap: 10px; margin: 28px 0 8px; }
+  .section-head h2 { margin: 0; border: none; }
+  .section-head .tag { font-size: 11px; padding: 3px 10px; border-radius: 12px; font-weight: normal; white-space: nowrap; }
+  .tag-new { background: #dc2626; color: #fff; }
+  .tag-old { background: #e2e8f0; color: #64748b; }
+  .tag-mixed { background: #7c3aed; color: #fff; }
+  .ribbon { position: relative; overflow: hidden; }
+  .ribbon::before {
+    content: "NEW";
+    position: absolute;
+    top: 12px; right: -28px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 30px;
+    transform: rotate(45deg);
+    letter-spacing: 1px;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .card.preexisting { opacity: 0.85; }
+  .card.preexisting:hover { opacity: 1; }
+</style>
 </head>
 <body>
 <nav class="top-nav">
@@ -30,116 +79,196 @@
   </p>
 </div>
 
-<h2>复习材料 Review Materials</h2>
+<div class="update-banner">
+  <span class="date-badge">2026-06-08</span>
+  <p><strong>今日更新：</strong>新增 4 个答题方法框架（Western版）、改造版模拟题（含 Compare 题）、认知深度索引图、三维诊断报告。沿用资料以 <strong>浅色标注</strong> 区分。</p>
+</div>
+
+<!-- ============================== -->
+<!-- 今日新增内容 -->
+<!-- ============================== -->
+<div class="section-head">
+  <h2>🆕 今日新增（2026-06-08 更新）</h2>
+  <span class="tag tag-new">NEW</span>
+</div>
+
 <div class="card-grid">
-  <div class="card">
+  <div class="card ribbon">
+    <h3><a href="skills_source_analysis.html">史料分析 Framework</a></h3>
+    <p>S-T-A-R 四问法：看来源、看立场、看观点、看可信。例题全部替换为西方史案例。</p>
+    <span class="badge badge-orange">analyze</span>
+    <span class="badge badge-green">答题方法</span>
+  </div>
+  <div class="card ribbon">
+    <h3><a href="skills_causality.html">因果链 Framework</a></h3>
+    <p>三步法 + 4 条西方史关键因果链（科学革命→启蒙、工业革命成因、法国大革命、启蒙→革命）。</p>
+    <span class="badge badge-orange">explain</span>
+    <span class="badge badge-green">答题方法</span>
+  </div>
+  <div class="card ribbon">
+    <h3><a href="skills_comparison.html">对比分析 Framework</a></h3>
+    <p>三步法 + 5 个必考对比表（Science vs Enlighten / Industrial vs French / Locke vs Rousseau 等）。</p>
+    <span class="badge badge-red">compare</span>
+    <span class="badge badge-green">答题方法</span>
+  </div>
+  <div class="card ribbon">
+    <h3><a href="skills_evaluation.html">评价分析 Framework</a></h3>
+    <p>P-E-B-C 四步法 + 2 个完整答题示范 + 3 个实战练习。</p>
+    <span class="badge badge-red">evaluate</span>
+    <span class="badge badge-green">答题方法</span>
+  </div>
+  <div class="card ribbon">
+    <h3><a href="mock_exam_v2.html">Mock Exam v2</a></h3>
+    <p>升级版：新增 Section F（Compare 10分），DBQ 附 S-T-A-R 引导提示栏，增加 Source D。</p>
+    <span class="badge badge-blue">100 marks</span>
+    <span class="badge badge-red">compare</span>
+  </div>
+  <div class="card ribbon">
+    <h3><a href="depth_index.html">Cognitive Depth Index</a></h3>
+    <p>5 个主题按 6 层认知层次标记覆盖情况，含针对性复习建议和学习路径。</p>
+    <span class="badge badge-purple">guide</span>
+  </div>
+  <div class="card ribbon">
+    <h3><a href="diagnostic_report.html">Diagnostic Report</a></h3>
+    <p>深度×广度×难度三维缺口诊断：compare=0% 的严重缺口已修复。</p>
+    <span class="badge badge-red">缺口分析</span>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- 复习材料（沿用） -->
+<!-- ============================== -->
+<div class="section-head" style="margin-top:36px;">
+  <h2>📚 复习材料（沿用）</h2>
+  <span class="tag tag-old">EXISTING</span>
+</div>
+<p style="font-size:13px;color:#94a3b8;margin-bottom:12px;">以下为之前已有的复习资料，部分内容已被今日新增的材料补充提升。</p>
+
+<div class="card-grid">
+  <div class="card preexisting">
     <h3><a href="review_guide.html">Topic 5 Review Guide</a></h3>
     <p>三天复习计划，覆盖科学革命 → 启蒙运动 → 工业革命 → 法国大革命</p>
     <span class="badge badge-blue">recall</span>
     <span class="badge badge-green">understand</span>
     <span class="badge badge-orange">explain</span>
   </div>
-  <div class="card">
+  <div class="card preexisting">
     <h3><a href="key_concepts.html">Key Concepts (Bilingual)</a></h3>
     <p>中英对照关键概念表，适合背诵自查</p>
     <span class="badge badge-blue">recall</span>
   </div>
-  <div class="card">
-    <h3><a href="diagnostic_report.html">Diagnostic Report</a></h3>
-    <p>三维诊断：深度、广度、难度缺口分析</p>
-    <span class="badge badge-red">meta</span>
-  </div>
-  <div class="card">
-    <h3><a href="depth_index.html">Cognitive Depth Index</a></h3>
-    <p>按主题的认知层次覆盖索引图，规划复习路径</p>
-    <span class="badge badge-purple">guide</span>
-  </div>
-  <div class="card">
+  <div class="card preexisting">
     <h3><a href="topic8_review_guide.html">Topic 8 Review Guide</a></h3>
     <p>香港发展（至19世纪末）复习指南</p>
     <span class="badge badge-blue">recall</span>
     <span class="badge badge-green">understand</span>
   </div>
-</div>
-
-<h2>答题方法框架 Skill Frameworks</h2>
-<div class="card-grid">
-  <div class="card">
-    <h3><a href="skills_source_analysis.html">史料分析 Framework</a></h3>
-    <p>S-T-A-R 四问法：看来源、看立场、看观点、看可信</p>
-    <span class="badge badge-orange">analyze</span>
+  <div class="card preexisting">
+    <h3><a href="day1_study.html">Day 1 Study Notes</a></h3>
+    <p>Scientific Revolution &amp; Enlightenment 逐页笔记</p>
   </div>
-  <div class="card">
-    <h3><a href="skills_causality.html">因果链 Framework</a></h3>
-    <p>三步法：定位事件 → 前找原因 → 后推影响</p>
-    <span class="badge badge-orange">explain</span>
+  <div class="card preexisting">
+    <h3><a href="day2_study.html">Day 2 Study Notes</a></h3>
+    <p>Industrial Revolution 逐页笔记</p>
   </div>
-  <div class="card">
-    <h3><a href="skills_comparison.html">对比分析 Framework</a></h3>
-    <p>三步法 + 5个必考对比表（Science vs Enlighten / Industrial vs French 等）</p>
-    <span class="badge badge-red">compare</span>
-  </div>
-  <div class="card">
-    <h3><a href="skills_evaluation.html">评价分析 Framework</a></h3>
-    <p>P-E-B-C 四步法：立场 → 证据 → 平衡 → 结论</p>
-    <span class="badge badge-red">evaluate</span>
-  </div>
-  <div class="card">
-    <h3><a href="skills_source_analysis_cn.html">史料分析（中史版）</a></h3>
-    <p>中国历史案例的 S-T-A-R 框架</p>
-    <span class="badge badge-orange">analyze</span>
-  </div>
-  <div class="card">
-    <h3><a href="skills_causality_cn.html">因果链（中史版）</a></h3>
-    <p>中国历史案例的三步因果链</p>
-    <span class="badge badge-orange">explain</span>
-  </div>
-  <div class="card">
-    <h3><a href="skills_comparison_cn.html">对比分析（中史版）</a></h3>
-    <p>中国历史案例的对比框架</p>
-    <span class="badge badge-red">compare</span>
-  </div>
-  <div class="card">
-    <h3><a href="skills_evaluation_cn.html">评价分析（中史版）</a></h3>
-    <p>中国历史案例的 P-E-B-C</p>
-    <span class="badge badge-red">evaluate</span>
+  <div class="card preexisting">
+    <h3><a href="day3_study.html">Day 3 Study Notes</a></h3>
+    <p>French Revolution + 总复习逐页笔记</p>
   </div>
 </div>
 
-<h2>模拟题 Mock Exams</h2>
+<!-- ============================== -->
+<!-- 模拟题（沿用） -->
+<!-- ============================== -->
+<div class="section-head" style="margin-top:36px;">
+  <h2>📝 模拟题（沿用）</h2>
+  <span class="tag tag-old">EXISTING</span>
+</div>
+
 <div class="card-grid">
-  <div class="card">
+  <div class="card preexisting">
     <h3><a href="mock_exam.html">Mock Exam v1</a></h3>
     <p>基础版：填空 + 时序 + 配对 + MCQ + DBQ（44分资料题）</p>
     <span class="badge badge-blue">100 marks</span>
   </div>
-  <div class="card">
-    <h3><a href="mock_exam_v2.html">Mock Exam v2 <span style="color:#c00;font-size:11px;">Enhanced</span></a></h3>
-    <p>升级版：增加 Section F (Compare 10分)，DBQ 附 S-T-A-R 引导</p>
-    <span class="badge badge-blue">100 marks</span>
-    <span class="badge badge-red">compare</span>
-  </div>
-  <div class="card">
-    <h3><a href="mock_exam_answers.html">Answer Key</a></h3>
-    <p>模拟题答案 + 评分标准</p>
+  <div class="card preexisting">
+    <h3><a href="mock_exam_answers.html">Mock Exam v1 Answer Key</a></h3>
+    <p>模拟题答案 + 详细评分标准（含模型答案）</p>
   </div>
 </div>
 
-<h2>参考材料 Reference</h2>
+<!-- ============================== -->
+<!-- 参考材料（沿用） -->
+<!-- ============================== -->
+<div class="section-head" style="margin-top:36px;">
+  <h2>📖 参考材料（沿用）</h2>
+  <span class="tag tag-old">EXISTING</span>
+</div>
+
 <div class="card-grid">
-  <div class="card">
+  <div class="card preexisting">
+    <h3><a href="skills_source_analysis_cn.html">史料分析（中史版）</a></h3>
+    <p>中国历史案例的 S-T-A-R 框架（方法原型）</p>
+    <span class="badge badge-orange">analyze</span>
+  </div>
+  <div class="card preexisting">
+    <h3><a href="skills_causality_cn.html">因果链（中史版）</a></h3>
+    <p>中国历史案例的三步因果链（方法原型）</p>
+    <span class="badge badge-orange">explain</span>
+  </div>
+  <div class="card preexisting">
+    <h3><a href="skills_comparison_cn.html">对比分析（中史版）</a></h3>
+    <p>中国历史案例的对比框架（方法原型）</p>
+    <span class="badge badge-red">compare</span>
+  </div>
+  <div class="card preexisting">
+    <h3><a href="skills_evaluation_cn.html">评价分析（中史版）</a></h3>
+    <p>中国历史案例的 P-E-B-C（方法原型）</p>
+    <span class="badge badge-red">evaluate</span>
+  </div>
+  <div class="card preexisting">
     <h3><a href="agent_handoff_deliverable.html">China History — Agent Handoff</a></h3>
     <p>中国历史科改造经验总结（方法迁移参考）</p>
   </div>
-  <div class="card">
+  <div class="card preexisting">
     <h3><a href="agent_handoff_history_methodology.html">Geography — Methodology</a></h3>
     <p>地理科实战复盘（深度×广度×难度分析法）</p>
   </div>
 </div>
 
+<!-- ============================== -->
+<!-- Topic 8 资料 -->
+<!-- ============================== -->
+<div class="section-head" style="margin-top:36px;">
+  <h2>🏙️ Topic 8 香港发展（沿用）</h2>
+  <span class="tag tag-old">EXISTING</span>
+</div>
+
+<div class="card-grid">
+  <div class="card preexisting">
+    <h3><a href="topic8_review_guide.html">Topic 8 Review Guide</a></h3>
+    <p>三大主题：殖民统治建立 / 经济与社会 / NGO 贡献</p>
+  </div>
+  <div class="card preexisting">
+    <h3><a href="topic8_day1.html">Topic 8 Day 1</a></h3>
+    <p>建立英国殖民统治 + 经济状况</p>
+  </div>
+  <div class="card preexisting">
+    <h3><a href="topic8_day2.html">Topic 8 Day 2</a></h3>
+    <p>社会状况 + 公共卫生与疾病</p>
+  </div>
+  <div class="card preexisting">
+    <h3><a href="topic8_day3.html">Topic 8 Day 3</a></h3>
+    <p>NGO 贡献 + 总复习</p>
+  </div>
+</div>
+
 <footer class="site-footer">
   <p>Built for F2 Western History review · Topic 5: The Rise of Modern Europe</p>
-  <p style="margin-top:4px;"><a href="https://github.com/gzxmren/western-history-review">View on GitHub</a></p>
+  <p style="margin-top:4px;">
+    <a href="https://github.com/gzxmren/western-history-review">GitHub</a>
+    &nbsp;·&nbsp; Updated 2026-06-08
+  </p>
 </footer>
 </main>
 </body>
